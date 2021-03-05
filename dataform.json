@@ -1,5 +1,7 @@
 {
-    "warehouse": "redshift",
-    "defaultSchema": "dataform",
-    "assertionSchema": "dataform_assertions"
+    "defaultSchema": "acme_bigquery",
+    "assertionSchema": "acme_bigquery_assertions",
+    "warehouse": "bigquery",
+    "defaultDatabase": "dataform-demos",
+    "useRunCache": "true"
 }

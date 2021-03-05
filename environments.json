@@ -1,0 +1,42 @@
+{
+  "environments": [
+    {
+      "name": "production",
+      "configOverride": {},
+      "schedules": [
+        {
+          "name": "daily",
+          "cron": "30 14 * * *",
+          "tags": [
+            "daily"
+          ]
+        },
+        {
+          "name": "hourly",
+          "cron": "59 */1 * * *"
+        },
+        {
+          "name": "new",
+          "cron": "31 17 * * mon,tue,wed,thu,fri,sat,sun",
+          "tags": [
+            "daily"
+          ]
+        }
+      ],
+      "gitRef": "master"
+    },
+    {
+      "name": "staging",
+      "configOverride": {
+        "schemaSuffix": "staging"
+      },
+      "schedules": [
+        {
+          "name": "daily (all)",
+          "cron": "42 16 * * mon,tue,wed,thu,fri,sat,sun"
+        }
+      ],
+      "gitRef": "f982f412187c200b6a2b24ec9e11277870c1eeb9"
+    }
+  ]
+}
